@@ -38,7 +38,6 @@ public class ServletJDBC extends HttpServlet {
 				genero = new ArrayList<String>(), telefono = new ArrayList<String>(),
 				direccion = new ArrayList<String>(), pais = new ArrayList<String>(), ciudad = new ArrayList<String>(),
 				correo = new ArrayList<String>(), contrasena = new ArrayList<String>();
-		ArrayList<ArrayList> ElementIDs = new ArrayList<ArrayList>();
 		var result = c.getModelo().getDb().getAllData().split("\n");
 		for (int i = 0; i < result.length; i++) {
 			var aResult = result[i].split(";");
@@ -55,19 +54,6 @@ public class ServletJDBC extends HttpServlet {
 			correo.add(aResult[10]);
 			contrasena.add(aResult[11]);
 		}
-		ElementIDs.add(id);
-		ElementIDs.add(usuario);
-		ElementIDs.add(nombre);
-		ElementIDs.add(apellido);
-		ElementIDs.add(edad);
-		ElementIDs.add(genero);
-		ElementIDs.add(telefono);
-		ElementIDs.add(direccion);
-		ElementIDs.add(pais);
-		ElementIDs.add(ciudad);
-		ElementIDs.add(correo);
-		ElementIDs.add(contrasena);
-		request.setAttribute("Elementos", ElementIDs);
 		request.setAttribute("listaIDS", id);
 		request.setAttribute("listaUsuarios", usuario);
 		request.setAttribute("listaNombres", nombre);
