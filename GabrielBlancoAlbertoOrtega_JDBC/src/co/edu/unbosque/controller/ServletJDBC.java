@@ -66,7 +66,7 @@ public class ServletJDBC extends HttpServlet {
 		request.setAttribute("listaCiudades", ciudad);
 		request.setAttribute("listaCorreos", correo);
 		request.setAttribute("listaContrasenas", contrasena);
-		RequestDispatcher myDispatcher = request.getRequestDispatcher("/index.jsp");
+		RequestDispatcher myDispatcher = request.getRequestDispatcher("/OnSearch.jsp");
 		myDispatcher.forward(request, response);
 	}
 
